@@ -42,7 +42,6 @@ Route::group(['middleware' => 'admin'], function() {
     Route::resource('/admin/tags', TagsController::class);
     Route::resource('/admin/users', UsersController::class);
     Route::resource('/admin/posts', PostsController::class);
-    Route::resource('/admin/posts/likes', [PostsController::class], 'likes');
     Route::get('/admin/comments', [CommentsController::class, 'index']);
     Route::get('admin/comments/toggle/{id}', [CommentsController::class, 'toggle']);
     Route::delete('/comments/{id}/destroy', [CommentsController::class, 'destroy'])->name('comments.destroy');
